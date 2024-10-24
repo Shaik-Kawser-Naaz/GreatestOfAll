@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>FORM</title>
+    </head>
+    <body>
+        <h1>Greatest of two numbers</h1>
+        <hr>
+        <form method="POST">{% csrf_token %}
+            <label for="n1">Number1:</label>
+            <input name="snum1" id="n1" type="number" placeholder="Enter Number1" required><br>
+            <label for="n2">Number2:</label>
+            <input name="snum2" id="n2" type="number" placeholder="Enter Number2" required>
+            <br><br><button>Submit</button>
+        </form>
+        <p>Hi Guys,</p>
+        {% if res %}
+           <h1>Number1 is greatest</h1>
+        {% else %}
+           <h1>Number2 is greatest</h1>
+        {% endif %}
+    </body>
+</html>
